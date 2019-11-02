@@ -9,7 +9,7 @@
 {#await promise}
   <h2>Loading...</h2>
 {:then data}
-  {#each data as headline}
-    <Item {...headline} />
+  {#each data as headline, i}
+    <Item {...headline} index={i} />
   {/each}
 {/await}
