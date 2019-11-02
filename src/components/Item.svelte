@@ -1,5 +1,6 @@
 <script>
-  export let id, title, points, user, time_ago, comments_count, url;
+  import { fade } from "svelte/transition";
+  export let id, title, points, user, time_ago, comments_count, url, index;
 
   import { Link } from "svelte-routing";
 </script>
@@ -13,7 +14,7 @@
   }
 </style>
 
-<article>
+<article in:fade={{ delay: 50 * index }}>
   <h2>
     <a href={url}>{title}</a>
   </h2>
