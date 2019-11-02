@@ -12,5 +12,4 @@
   {#each data as headline}
     <Item {...headline} />
   {/each}
-  <pre>{JSON.stringify(data, null, 2)}</pre>
 {/await}
